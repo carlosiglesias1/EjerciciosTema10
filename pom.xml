@@ -7,6 +7,10 @@
   <version>entregable</version>
   <name>ejercicios</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <maven.compiler.source>1.14</maven.compiler.source>
+    <maven.compiler.target>1.14</maven.compiler.target>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
