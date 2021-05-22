@@ -20,7 +20,6 @@ public class Rectangulo_v8 extends Figura2D_v8 {
     public boolean esCuadrado (){
         if(this.getAlto() == this.getAncho())
             return true;
-        else 
-            return false;
+        return false;
     }
 }
