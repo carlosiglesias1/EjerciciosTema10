@@ -1,6 +1,6 @@
 package recursos.figuras;
 
-public class Triangulo_v8 extends Figura2D_v8 {
+public class Triangulo_v8 extends Figura2D_v9 {
     private String estilo;
 
     public Triangulo_v8 (float alto, float ancho, String nombre, String estilo){

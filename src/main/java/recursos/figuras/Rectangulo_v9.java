@@ -7,13 +7,13 @@ package recursos.figuras;
  * llamado esCuadrado().
  */
 
-public class Rectangulo_v8 extends Figura2D_v8 {
+public class Rectangulo_v9 extends Figura2D_v9 {
     
-    public Rectangulo_v8 (float alto, float ancho, String nombre){
+    public Rectangulo_v9 (float alto, float ancho, String nombre){
         super(alto, ancho, nombre);
     }
 
-    public Rectangulo_v8 (float altoYAncho, String nombre){
+    public Rectangulo_v9 (float altoYAncho, String nombre){
         super(altoYAncho, nombre);
     }
 
@@ -21,5 +21,9 @@ public class Rectangulo_v8 extends Figura2D_v8 {
         if(this.getAlto() == this.getAncho())
             return true;
         return false;
+    }
+
+    public float area (){
+        return this.getAncho()*this.getAlto();
     }
 }
