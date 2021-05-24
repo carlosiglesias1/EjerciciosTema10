@@ -45,4 +45,8 @@ public abstract class Figura2D_v9 {
     }
 
     abstract float area ();
+
+    public float precio (float precioMetroCuadrado){
+        return this.area()*precioMetroCuadrado;
+    }
 }
