@@ -7,7 +7,7 @@ package recursos.figuras;
  * además del getter y setter de color.
  */
 
-public class TrianColor_v9 extends Triangulo_v8 {
+public class TrianColor_v9 extends Triangulo_v9 {
     private String color;
 
     public TrianColor_v9 (float base, float altura, String name, String style, String colour){
