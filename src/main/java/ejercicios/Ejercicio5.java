@@ -1,5 +1,11 @@
 package ejercicios;
 
+import java.util.Scanner;
+
+import recursos.piezasAjedrez.AlfilAjedrez;
+import recursos.piezasAjedrez.PiezaAjedrez;
+import recursos.piezasAjedrez.TorreAjedrez;
+
 /**
  * 10.5. Pensando que en el futuro implementemos el juego de ajedrez para dos
  * jugadores, se desea crear una clase abstracta llama PiezaAjedrez, con dos
@@ -19,5 +25,32 @@ package ejercicios;
  */
 
 public class Ejercicio5 {
-
+    public static void main(String[] args) {
+        PiezaAjedrez[] pieza = new PiezaAjedrez[2];
+        int[] movimiento = new int[2];
+        Scanner teclado = new Scanner(System.in);
+        int opcion;
+        pieza[0] = new AlfilAjedrez(0, 0);
+        pieza[1] = new TorreAjedrez(0, 0);
+        System.out.println("Qué pieza quieres mover?\n0: Alfil\n1: Torre");
+        opcion = teclado.nextInt();
+        if (opcion == 0) {
+            System.out.println("A dónde quieres mover la pieza?");
+            movimiento[0] = teclado.nextInt();
+            movimiento[1] = teclado.nextInt();
+            if (pieza[0].mover(movimiento[0], movimiento[1]))
+                System.out.println("Se ha ejecutado tu movimiento");
+            else
+                System.out.println("No se ha podido ejecutar tu movimiento");
+        } else {
+            System.out.println("A dónde quieres mover la pieza?");
+            movimiento[0] = teclado.nextInt();
+            movimiento[1] = teclado.nextInt();
+            if (pieza[1].mover(movimiento[0], movimiento[1]))
+                System.out.println("Se ha ejecutado tu movimiento");
+            else
+                System.out.println("No se ha podido ejecutar tu movimiento");
+        }
+        teclado.close();
+    }
 }
