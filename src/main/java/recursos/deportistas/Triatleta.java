@@ -10,9 +10,9 @@ public class Triatleta implements Saltador, Nadador, Ciclista {
     }
 
     public int nadar(float metros) {
-        if (this.edad > 20 && this.edad < 30)
+        if (this.edad > 20 && this.edad <= 30)
             return (int) (metros / 1.09f);
-        else if (this.edad > 30 && this.edad < 40)
+        else if (this.edad > 30 && this.edad <= 40)
             return (int) (metros / 0.83f);
         else
             return (int) (metros / 0.5f);

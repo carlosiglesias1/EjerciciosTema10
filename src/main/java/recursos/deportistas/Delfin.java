@@ -16,6 +16,6 @@ public class Delfin implements Nadador {
         Random velocidad = new Random();
         //40 km/h = 11.11 m/s
         //70 km/h = 19.44 m/s
-        return (int) (metros/velocidad.nextFloat()*(19.44f-11.11f));
+        return (int) (metros/(velocidad.nextFloat()*(8.33f)));
     }
 }
