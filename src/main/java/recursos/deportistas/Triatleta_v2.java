@@ -2,10 +2,18 @@ package recursos.deportistas;
 
 import java.util.Random;
 
-public class Triatleta implements Saltador_v2, Nadador, Ciclista {
-    private int edad;
+/**
+ * Haz una nueva versión de TriAtleta (sufijo _v2b) que implemente saltaPertiga
+ * con este criterio: para saltos de más de 6 metros devuelve false, entre 5 y 6
+ * metros devuelve true la mitad de las veces y por debajo de 5 metros devuelve
+ * siempre true.
+ */
 
-    public Triatleta(int edad) {
+public class Triatleta_v2 implements Saltador_v2, Nadador, Ciclista {
+    private int edad;
+    private int nSaltos;
+
+    public Triatleta_v2(int edad) {
         this.edad = edad;
     }
 
@@ -29,7 +37,7 @@ public class Triatleta implements Saltador_v2, Nadador, Ciclista {
     public int recorrer(float metros, String terreno) throws Exception {
         int pista = terrenoValido(terreno);
         if (pista != -1) {
-            switch (pista){
+            switch (pista) {
                 case 0:
                     return (int) (metros / 8.33f);
                 case 1:
@@ -44,12 +52,26 @@ public class Triatleta implements Saltador_v2, Nadador, Ciclista {
     }
 
     public int saltarAltura() {
-        Random altura = new Random ();
+        Random altura = new Random();
         if (this.edad > 20 && this.edad < 30)
-            return altura.nextInt(39)+15;
+            return altura.nextInt(39) + 15;
         else if (this.edad > 30 && this.edad < 40)
-            return altura.nextInt(30)+10;
+            return altura.nextInt(30) + 10;
         else
-            return altura.nextInt(20)+5;
+            return altura.nextInt(20) + 5;
+    }
+
+    @Override
+    public boolean saltaPertiga(float metros) {
+        if (metros > 6)
+            return false;
+        else if (metros <= 6 && metros > 5) {
+            this.nSaltos++;
+            if (this.nSaltos % 2 == 0)
+                return true;
+            else
+                return false;
+        }
+        return true;
     }
 }
