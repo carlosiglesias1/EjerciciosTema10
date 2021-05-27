@@ -2,6 +2,7 @@ package ejercicios;
 
 import java.util.ArrayList;
 import recursos.hotel.Habitacion;
+import recursos.hotel.Hotel;
 
 /**
  * 10.12. Se desea hacer la gestión de las habitaciones de un hotel. Todas las
@@ -30,6 +31,6 @@ import recursos.hotel.Habitacion;
 
 public class Ejercicio12 {
     public static void main(String[] args) {
-        ArrayList<Habitacion> habitacions = new ArrayList<>();
+        Hotel hotel = new Hotel();
     }
 }

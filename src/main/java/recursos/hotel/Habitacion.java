@@ -13,6 +13,12 @@ public abstract class Habitacion {
         this.checkOut = checkOut;
     }
 
+    protected Habitacion (int precio){
+        this.precio = precio;
+        this.checkIn = null;
+        this.checkOut = null;
+    }
+
     public int getPrecio() {
         return precio;
     }

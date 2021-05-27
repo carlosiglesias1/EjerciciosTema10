@@ -13,4 +13,8 @@ public class HSuite extends Habitacion {
         if (this.getDias() > 10)
             this.setPrecio(160);
     }
+
+    public HSuite (){
+        super(200);
+    }
 }

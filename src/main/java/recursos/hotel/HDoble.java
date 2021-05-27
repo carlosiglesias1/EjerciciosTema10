@@ -15,4 +15,8 @@ public class HDoble extends Habitacion {
                 || checkOut.getMonth() == Month.APRIL)
             super.setPrecio(120);
     }
+
+    public HDoble (){
+        super(100);
+    }
 }
