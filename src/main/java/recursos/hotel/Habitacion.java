@@ -13,7 +13,7 @@ public abstract class Habitacion {
         this.checkOut = checkOut;
     }
 
-    protected Habitacion (int precio){
+    protected Habitacion(int precio) {
         this.precio = precio;
         this.checkIn = null;
         this.checkOut = null;
@@ -51,8 +51,6 @@ public abstract class Habitacion {
         return (float) this.getDias() * this.getPrecio();
     }
 
-    @Override 
-    public String toString (){
-        return this.precio + this.checkIn.toString() + this.checkOut.toString();
-    }
+    @Override
+    public abstract String toString();
 }

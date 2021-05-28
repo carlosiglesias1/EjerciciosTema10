@@ -14,7 +14,12 @@ public class HSuite extends Habitacion {
             this.setPrecio(160);
     }
 
-    public HSuite (){
+    public HSuite() {
         super(200);
+    }
+
+    @Override
+    public String toString() {
+        return "Suite, " + this.getCheckIn() + " - " + this.getCheckOut() + ", " + this.checkOut();
     }
 }

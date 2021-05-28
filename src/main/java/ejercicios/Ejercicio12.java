@@ -1,5 +1,7 @@
 package ejercicios;
 
+import java.time.LocalDate;
+
 import recursos.hotel.Hotel;
 
 /**
@@ -30,5 +32,21 @@ import recursos.hotel.Hotel;
 public class Ejercicio12 {
     public static void main(String[] args) {
         Hotel hotel = new Hotel();
+        
+        for (int i = 0; i < hotel.checkRooms().length; i++) {
+            System.out.println(hotel.checkRooms()[i]);
+        }
+
+        try {
+            if(hotel.checkIn(18, LocalDate.parse("2021-05-28"), LocalDate.parse("2021-06-28")))
+                System.out.println("Registrado");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        for (int i = 0; i < hotel.checkRooms().length; i++) {
+            System.out.println(hotel.checkRooms()[i]);
+        }
+
     }
 }

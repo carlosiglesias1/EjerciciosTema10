@@ -19,4 +19,9 @@ public class HDoble extends Habitacion {
     public HDoble (){
         super(100);
     }
+
+    @Override
+    public String toString() {
+        return "Habitación Doble, " + this.getCheckIn() + " - " + this.getCheckOut() + ", " + this.checkOut();
+    }
 }
